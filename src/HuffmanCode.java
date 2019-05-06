@@ -10,7 +10,9 @@ public class HuffmanCode {
         String outString = "";
 
         for (char c : s.toCharArray()) {
-            outString += huffmanTable[c]; // the huffmanTable array is a lookup table, where each index represents the decimal representation of the corresponding char
+            if (c < 256) { // Ignore non-ascii chars
+                outString += huffmanTable[c]; // the huffmanTable array is a lookup table, where each index represents the decimal representation of the corresponding char
+            }
         }
 
         return outString;
@@ -49,7 +51,7 @@ public class HuffmanCode {
         String tableAsString = "";
         for (char c = 0; c < huffmanTable.length; c++) {
             if (huffmanTable[c] != null) {
-                tableAsString += (int)c + ":" + huffmanTable[c] + "-";
+                tableAsString += (int) c + ":" + huffmanTable[c] + "-";
             }
         }
         tableAsString = tableAsString.substring(0, tableAsString.length() - 1); // Remove last unneccessary dash

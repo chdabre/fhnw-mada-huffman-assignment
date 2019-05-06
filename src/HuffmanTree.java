@@ -10,7 +10,9 @@ public class HuffmanTree {
         int[] frequencyTable = new int[256];
 
         for(char c : text.toCharArray()) {
-            frequencyTable[c]++;
+            if (c < 256) { // Ignore non-ascii chars
+                frequencyTable[c]++;
+            }
         }
 
         return frequencyTable;
