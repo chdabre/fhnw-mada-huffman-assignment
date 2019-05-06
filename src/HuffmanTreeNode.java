@@ -1,3 +1,7 @@
+/**
+ * Represents a Node in a Huffman Tree. A node can have two children, a left and a right child, or be a leaf node.
+ * Leaf nodes have a leaf character associated with them. The path to those nodes from the top node represents the Huffman code for that character (left=0, right=1)
+ */
 public class HuffmanTreeNode implements Comparable<HuffmanTreeNode> {
     private final char leafChar;
     private final int frequency;
