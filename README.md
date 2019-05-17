@@ -1,6 +1,6 @@
 # Solution for mada Assignment Huffman Code
 
-Solution by Dario Breitenstein
+Solution by Dario Breitenstein / Hanna Franz
 
 ## Outline
 
